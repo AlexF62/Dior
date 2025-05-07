@@ -1,25 +1,29 @@
 import React from 'react';
 import menuItems, { ItemsMenu } from '../../data/menuItems';
-import iconMenu, { MenuIcons } from '../../data/iconMenu';
+import styled from 'styled-components';
+
+const MenuItem = styled.li`
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+`;
+
+const NavMenu = styled.nav`
+    margin-left: 130px;
+    margin-right: 185px;
+`;
 
 const Menu: React.FC = () => {
     return (
-        <nav>
+        <NavMenu>
             <ul>
                 {menuItems.map((item: ItemsMenu, index) => (
-                    <li key={index}>
+                    <MenuItem key={index}>
                         <a href={item.href}>{item.label}</a>
-                    </li>
+                    </MenuItem>
                 ))}
             </ul>
-            <ul>
-                {iconMenu.map((item: MenuIcons) => (
-                    <li key={item.id}>
-                        <img src={item.image} alt={item.alt} />
-                    </li>
-                ))}
-            </ul>
-        </nav>
+        </NavMenu>
     );
 };
 
