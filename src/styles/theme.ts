@@ -10,7 +10,7 @@ export interface Theme {
     colors: {
       primary: '#0070f3',
       background: '#f8f9fa',
-      text: '#0A0A0A',
+      text: '#1B1B1B',
     },
   };
   
